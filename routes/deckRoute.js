@@ -4,6 +4,6 @@ const router = require('express').Router();
 
 router.post('/:cardId', deckController.addToDeck);
 router.delete('/:id', deckController.removeFromDeck);
-router.get('/:deckName', deckController.showDeck);
+router.get('/', deckController.showDeck);
 
 module.exports = router;

@@ -49,7 +49,7 @@ class deckController {
 
   static showDeck = async (req, res, next) => {
     try {
-      const { deckName } = req.params;
+
       const userId = req.loginUser.id;
       const deck = await Deck.findAll({ where: { UserId: userId } });
       res.status(200).json(deck);
